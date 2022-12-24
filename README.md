@@ -8,3 +8,6 @@ You can read more about `-p` key here: https://exiftool.org/exiftool_pod.html#p-
 
 My orignal purpose is to use it with **ImageGlass** image viewer while working in Stable Diffusion UI.
 https://github.com/AUTOMATIC1111/stable-diffusion-webui/discussions/1569#discussioncomment-4175458
+
+# Q&A
+For some questions and answers look at the issue https://github.com/Eugenii10/exiftool-sd-format/issues/1 .
