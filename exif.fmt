@@ -1,9 +1,9 @@
 # ***
-File	File name	$FileName
-File	Directory name	${directory;s/\//\\/g}
-${PNG:Parameters;$_="File	Parameters	" . $_}
-${PNG:Parameters;$_="SD Prompt\tPrompt\t" . (split("\n", $_))[0]}
-${PNG:Parameters;my $out=""; my $rec=""; my $counter=0; foreach $rec (unpack("(A70)*", (split("\n", $_))[0])) { $counter += 1; $out = $out . "SD Prompt\tPpt. Pt. #$counter\t$rec\n" }; $out=~ s/\s+$//; $_ = $out;}
-${PNG:Parameters;$_=(split("\n", $_) > 2 ? "SD Prompt\tNegative prompt\t" . (split(": ", (split("\n", $_))[1], 2))[1] : undef)}
-${PNG:Parameters;my $out=""; my $rec=""; foreach $rec (split(", ", (split("\n", $_))[-1])) { my @s1=split(": ",$rec); $out = $out . "SD Gen Params\t$s1[0]\t$s1[1]\n"; }; $out=~ s/\s+$//; $_ = $out;}
-${PNG:Extras;my $out=""; my $rec=""; foreach $rec (split(", ", $_)) { my @s1=split(":",$rec); $s1[1] =~ s/^\s+//; $out = $out . "SD Extras\t$s1[0]\t$s1[1]\n"; }; $out=~ s/\s+$//; $_ = $out;}
+File	-	File name	$FileName
+File	-	Directory name	${directory;s/\//\\/g}
+${PNG:Parameters;$_="File	-	Parameters	" . $_}
+${PNG:Parameters;$_="SD Prompt\t-\tPrompt\t" . (split("\n", $_))[0]}
+${PNG:Parameters;my $out=""; my $rec=""; my $counter=0; foreach $rec (unpack("(A70)*", (split("\n", $_))[0])) { $counter += 1; $out = $out . "SD Prompt\t-\tPpt. Pt. #$counter\t$rec\n" }; $out=~ s/\s+$//; $_ = $out;}
+${PNG:Parameters;$_=(split("\n", $_) > 2 ? "SD Prompt\t-\tNegative prompt\t" . (split(": ", (split("\n", $_))[1], 2))[1] : undef)}
+${PNG:Parameters;my $out=""; my $rec=""; foreach $rec (split(", ", (split("\n", $_))[-1])) { my @s1=split(": ",$rec); $out = $out . "SD Gen Params\t-\t$s1[0]\t$s1[1]\n"; }; $out=~ s/\s+$//; $_ = $out;}
+${PNG:Extras;my $out=""; my $rec=""; foreach $rec (split(", ", $_)) { my @s1=split(":",$rec); $s1[1] =~ s/^\s+//; $out = $out . "SD Extras\t-\t$s1[0]\t$s1[1]\n"; }; $out=~ s/\s+$//; $_ = $out;}
